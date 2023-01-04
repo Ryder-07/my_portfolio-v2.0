@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+:root{
+    --primaryColor:black;
+    --secondaryColor:rgb(82,33,230);
+    --tertiarycolor:#8491a0;
+    --darkgrey:rgb(24,24,35);
+    --blue:rgb(1,245,246);
+    --white:white;
+    --grey:rgb(140,140,145);
+}
+@keyframes slide-in-left {
+    0% {
+      transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  } 
+  
+body{
+    font-size: 16px;
+    background-color: black;
+    color: var(--white);
+    font-family: 'Sen', sans-serif;
+    overflow-x: hidden;
+
+    
+}
+.header{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;    
+    height: 70px;
+    font-size: 1.5rem;
+    padding:0px 15px;
+    position: fixed;
+}
+
+.navigationbar{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.nav, .navc{
+    color: var(--white);
+    margin-left:4px ;
+    padding: 15px;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+}
+.webname{
+    color: var(--white);
+      font-size: 1.5rem;
+      font-weight: 600;    
+}
+.navc{
+    height:70px;
+    margin-right: 25px;
+    background-color: var(--secondaryColor);
+    
+
+}
+.nav:hover{
+    color: var(--blue);
+    
+}
+.navc:hover{
+    background-color: rgba(82,33,230,.8);
+} 
+#landing{
+    height: 100vh;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 33%, rgba(24,24,35,1) 33%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#landing .imgContainer{
+    height: 80vh;
+    max-height: 860px;
+    width: 50%;
+    max-width: 50%;
+    background-image:url("https://uploads-ssl.webflow.com/5eb98b2079b4fc247b5a89f3/5eb99a5d7fd124026dae7f13_Hero%20Image.jpg") ;
+    background-size: cover;
+    background-position: 50% 50%;
+    animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+
+}
+
+#landing .textContainer{
+    height: 80vh;
+    width: 50%;
+    margin-left: -60px;
+    font-size: 3.5rem;
+    text-align: left;
+    font-weight: 900;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    flex-direction:column;
+    animation: slide-in-right 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+#landing .textContainer span{
+    color: var(--grey);
+}
+#landing .textContainer p{
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 30px;
+    line-height:2.25rem;
+    color:var(--tertiarycolor);
+}
+.header .navigationbar i{
+    display: none;
+}
+#about{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+#about .textContainer{
+    color: black;
+    font-size: 2.5rem;
+    height: 80vh;
+    width: 50%;
+    background-color:rgb(255,243,228);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+}
+#about .textContainer h2{
+    width: 70%;
+}
+#about .textContainer p{
+    width: 70%;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: var(--grey);
+}
+#about .textContainer button{
+    height: auto;
+    margin-top: 50px;
+    padding: 5px;
+    width: 100px;
+    border:none;
+    outline: none;
+    text-align: center;
+    background-color:rgb(255,243,228) ;
+    border-bottom: 2px solid black;
+    text-align: start;
+    transition: all .3s ease-in-out;
+}
+#about .textContainer button:hover{
+    background-color: var(--secondaryColor);
+    scale: 1.2;
+    width: 120px;
+    padding:5px 15px ;
+    border-width: 0px;
+    color: var(--white);
+
+}
+#about .imgContainer{
+    height: 80vh;
+    width: 50%;
+    background-image: url("https://uploads-ssl.webflow.com/5eb98b2079b4fc247b5a89f3/5eb99a5bece6f9113960579b_Philosophy.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+hr{
+    
+    width: 80%;
+    height: 5px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+#experience{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+#experience .heading{
+    margin-top: 70px;
+    margin-left: 40px;
+    width: 100%;
+    height: 40%;
+    font-size: 3rem;
+    display: flex;
+    align-items:flex-start ;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+#experience .heading p{
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--tertiarycolor);
+}
+#experience .stats {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#experience .stats .company{
+    height: 80%;
+    width: 25%;
+    min-width: 250px;
+}
+.number{
+    font-size: 8rem;
+    color: var(--tertiarycolor);
+}
+.compname{
+    font-size: 1.5rem;
+}
+.compinfo{
+    font-size: 1.2rem;
+    color:var(--grey);
+    padding: 10px 0;
+}
+
+
+
+#projects{
+    height: auto;
+    width: 100%;
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: center;
+}
+#projects .project1{
+    /* background-color:aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-width: 45%;
+    margin-top: 70px;
+    width: 100%;
+    height: 40%;
+    font-size: 3rem;
+
+}
+
+#projects .project2{
+    /* background-color:aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin:0 40px; */
+    height: 100%;
+    max-width: 45%;
+    margin-top: 70px;
+
+}
+p{
+    font-size: 1.2rem;
+    color:var(--grey);
+}
+.projectcard{
+    height: 600px;
+    width: 95%;
+    /* background-color: blue; */
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 1s ease-in-out;
+    
+
+}
+.projectcard .textcontainer h1{
+    transition: all 1s ease-in-out;
+}
+.projectcard:hover{
+    scale: 1.05;
+}
+.projectcard:hover .textcontainer h1{
+    color: var(--blue);
+    transform: translateX(30px);
+}
+.projectcard .imagecontainer{
+   height: 60%;
+   width: 100%;
+   /* background-color: blueviolet; */
+   background-image: url("https://uploads-ssl.webflow.com/5eb98b2079b4fc247b5a89f3/5eb99a5c86971f21359e93b7_Project%201-p-1600.jpeg");
+   background-size: 100% 100%;
+}
+.projectcard .textcontainer{
+    height: 40%;
+    width: 100%;
+    font-size: 1rem;
+    padding: 30px 15px;
+    background-color:var(--darkgrey);
+}
+.projectcard .textcontainer h1{
+    margin-bottom: 10px;
+}
+.project2 button{
+    height: 40px;
+    width: 180px;
+    margin-top: 50px;
+    border: 3px solid var(--secondaryColor);
+    background-color: var(--primaryColor);
+    color: var(--white);
+    transition: all .4s ease-in-out;
+}
+.project2 button:hover{
+    background-color: var(--secondaryColor);
+    scale: 1.1;
+}
+#skills{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 80vh;
+    height:auto;
+    width: 100%;
+    /* background-color: blueviolet; */
+
+}
+.skillset1, .skillset2, .skillset3{
+    height: 100%;
+    width: 30%;
+    margin: 10px;
+    border: 1px solid var(--secondaryColor);
+    margin-top: 70px;
+    padding: 20px;
+}
+.skillset1 h1{
+    margin: 30px 10px;
+    font-size: 3rem;
+}
+.skillset1 p{
+    margin: 0 10px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.skill{
+    height: 300px;
+    width: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+    flex-direction: column;
+    border: 1px solid var(--secondaryColor);
+}
+.skill i{
+    font-size: 2.5rem;
+    padding: 20px;
+}
+.skill h1{
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+.testimonials{
+    height: auto;
+    width: 100%;
+    background-color: var(--primaryColor);
+}
+@media screen and (max-width:780px){
+    .navigationbar{
+        display:none;
+    }
+    .header{
+        background-color: black;
+    }
+    #landing{
+        background: black;
+        flex-direction: column;
+    }
+    #landing .imgContainer{
+        height: 50vh;
+        margin-top: 70px;
+        width: 100%;
+        max-width: 100%;    
+    }
+    #landing .textContainer{
+        height: 50vh;
+        width: 100%;
+        margin-left:0px;
+        padding-left: 20px;
+        padding-top: 20px;
+        font-size: 2rem;
+       background-color:var(--darkgrey);
+    }
+    #landing .textContainer p{
+        width: 95%;
+            font-size: 1.25rem;
+            line-height:1.75rem;
+        color:var(--tertiarycolor);
+    }
+    .header .navigationbar i{
+        display:block;
+    }
+    #about{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 125vh;
+        width: 100%;
+    }
+    #about .textContainer{
+        color: black;
+        font-size: 2.5rem;
+        height: 50%;
+        width: 100%;
+        background-color:rgb(255,243,228);
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        flex-direction: column;
+    }
+   
+    #about .imgContainer{
+        height: 50%;
+        width: 100%;
+        background-image: url("https://uploads-ssl.webflow.com/5eb98b2079b4fc247b5a89f3/5eb99a5bece6f9113960579b_Philosophy.jpg");
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+    
+    
+
+}
