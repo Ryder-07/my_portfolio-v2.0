@@ -403,30 +403,26 @@ p{
     padding:10px 20px;
 }
 
-.testimonials{
-    height: auto;
-    width: 100%;
-    background-color: var(--primaryColor);
-}
+
 #testimonials{
     min-height: 100vh;
     height: auto;
     width: 100%;
-    padding: 30px;
+    padding: 50px;
     margin-top: 70px;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content:space-evenly;
 } 
 .testdiv1, .testdiv2{
     height: auto;
     min-height: 90vh;
     width: 40%;
-    background-color: brown;
+    /* background-color: brown; */
     
 }  
 .testdiv1{
-    /* position: fixed; */background-color: aqua;
+    /* position: fixed;background-color: aqua; */
     
 }
 
@@ -434,9 +430,63 @@ p{
 .peopletest{
     height: 600px;
     width: 100%;
-    margin: 100px 0px;
+    margin-bottom: 100px;
     padding: 0px 10px;
-    background-color: blue;
+    /* background-color: blue; */
+
+}
+.peopletest .imageContainer{
+    height: 50%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-image: url("https://uploads-ssl.webflow.com/5eb98b2079b4fc247b5a89f3/5eb99a5ca959aafef7674902_Testimonial%201.jpg");
+}
+.peopletest .textcontainer{
+    height: 50%;
+    width: 100%;
+    /* background-color: var(--tertiarycolor); */
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-top: 0px;
+}
+.peopletest .textcontainer h1{
+    padding: 40px;
+}
+.peopletest .textcontainer h3{
+    color: var(--tertiarycolor);
+    padding-left: 40px;
+}
+.peopletest .textcontainer h5{
+    padding-left:40px ;
+}
+.testdiv1   h1{
+    font-size: 3rem;
+
+}
+.testdiv1 p{
+    color: var(--tertiarycolor);
+    padding: 20px 0 ;
+    margin-top: 30px;
+}
+.testdiv1 button{
+    font-size: 1.2rem;
+    height: 45px;
+    width: 200px;
+    margin-top: 50px;
+    border: 3px solid var(--secondaryColor);
+    background-color: var(--primaryColor);
+    color: var(--white);
+    transition: all .4s ease-in-out;
+}
+.testdiv1 button:hover{
+    background-color: var(--secondaryColor);
+    scale: 1.1;
+}
+#contact{
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    background-color:var(--primaryColor);
 
 }
 
